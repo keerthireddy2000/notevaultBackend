@@ -29,6 +29,3 @@ urlpatterns = [
     path('check_grammar/', views.check_text, name='check_grammar'),
     path('api/getFirstname/', views.get_firstname, name='get_firstname'),
 ]
-
-if settings.DEBUG:
-    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
