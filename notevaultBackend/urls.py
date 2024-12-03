@@ -1,6 +1,9 @@
 from django.urls import path
 from myapp import views
 from rest_framework_simplejwt.views import TokenRefreshView
+from django.conf import settings
+from django.conf.urls.static import static
+
 
 urlpatterns = [
     path('', views.index),
@@ -26,3 +29,6 @@ urlpatterns = [
     path('check_grammar/', views.check_text, name='check_grammar'),
     path('api/getFirstname/', views.get_firstname, name='get_firstname'),
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
