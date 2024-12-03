@@ -75,7 +75,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'notevaultBackend.wsgi.application'
+WSGI_APPLICATION = 'notevaultBackend.wsgi.app'
 
 KEY = os.getenv('API_KEY')
 
